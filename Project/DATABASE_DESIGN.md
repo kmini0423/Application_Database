@@ -1,9 +1,5 @@
 # CS348 Project – Database Design (Stage 2)
 
-**Application:** Cars & Coffee 247 – Car club event management  
-**Main table for Requirement 1:** Events  
-**Report for Requirement 2:** Filtered event list + statistics (date range, event type, location)
-
 ---
 
 ## Relational Schema
@@ -113,25 +109,3 @@ status, user_id, event_id (for report aggregates and lookups).
 
 
 
-
-
-
-
----
-
-## Table relationships (summary)
-
-- **Events** is the main table (Requirement 1: insert, update, delete).
-- **EventTypes** and **Locations** are referenced by Events and used to build dropdowns from the database (Requirement 2 point c).
-- **Users** are referenced by Events (created_by) and EventOrganizers, and by RSVPs.
-- **RSVPs** and **EventOrganizers** are supporting tables; report statistics are derived from Events + RSVPs (e.g., total events, average yes count, average total RSVPs per event).
-
----
-
-## Requirement mapping
-
-| Requirement | Main table / use |
-|-------------|-------------------|
-| **Req 1** (add, edit, delete) | Events (and EventOrganizers when assigning organizers). |
-| **Req 2** (filter + report)   | Events filtered by date range, type_id, location_id; statistics from Events + RSVPs. |
-| **Dynamic UI** (dropdowns from DB) | EventTypes and Locations tables; UI calls GET /api/event-types and GET /api/locations. |

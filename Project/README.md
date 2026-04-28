@@ -189,7 +189,7 @@ The database schema includes sample data:
 
 **Source code URL:** Add your GitHub repository link here after publishing:
 
-- **Repository:** `https://github.com/YOUR_USERNAME/YOUR_REPO` *(replace with your link)*
+- **Repository:** `https://github.com/kmini0423/Application_Database` *(replace with your link)*
 
 **Live application URL (optional; extra credit if deployed to GCP/AWS/Azure):**
 
